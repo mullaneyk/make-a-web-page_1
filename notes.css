@@ -1,0 +1,33 @@
+/* This text color is specified in what's called "hex". You will learn more about this later. */
+h1 {
+    font-family: Arial;
+    text-align: center;
+    color: black;
+}
+
+/* margins push other elements away */ 
+h2 {
+    font-family: Tahoma; 
+    text-align: left;
+    color: #2e74b5;
+}
+
+h3 {
+    font-family: Tahoma; 
+    text-align: left;
+    color: #ff9900;
+}
+
+/* change to a nicer font */
+body {
+    font-family: Georgia;
+    font-weight: lighter;
+  
+}
+
+.notes {
+    font-weight: lighter;
+    color: #666666;
+    margin: 10px;
+}
+

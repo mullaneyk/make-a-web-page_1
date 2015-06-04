@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<!--notes by Kathleen Mullaney, created 5/23/15-->
+
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>IPND Stage One Notes</title>
+  <link rel="stylesheet" type="text/css" href="notes.css">
+</head>
+
+<body>
+  <h1>IPND Stage One Notes</h1>
+  <div class="notes">
+    <h2 id="lesson1">Lesson 1: The Basics of the Web and HTML</h2>
+    <h3>Components</h3>
+
+      <ul>
+         <li> <strong>HTML</strong> - the main type of document on the web</li>
+         <li> <strong>HTTP</strong> - the main protocol of the web </li>
+         <li> <strong>Tag</strong> - an HTML tag is always contained within angled brackets. Most tags have an opening tag (&lt;p&gt; for example) and a closing tag, (&lt;/p&gt;). Some tags (called "void" tags) do not require a closing tag (like the &lt;br&gt; tag). Examples:</li>
+         
+         <li>   
+         <ul> 
+            <li> &lt;em&gt; - italics </li> 
+            <li> &lt;a&gt; - anchor, used for making links </li>
+            <li> &lt;image&gt; - void tag, has no content. Images have no content, they do not need a closing tag (note: anchor tags use the href attribute while img tags use the src attribute) </li>
+            <li> &lt;br&gt; - also a void tag, creates a line break </li> 
+            <li> &lt;p&gt; - paragraph, makes a block. Makes a box around the text. Can have width and height. Different from &lt;br&gt;, which will just create a new line and should be used "inline" </li> 
+
+         </ul>
+         </li>
+
+         <li> <strong>Element</strong> - an HTML element refers to everything within a set of opening and closing tags. </li>
+              <li>
+              <ul>
+                  <li> Container Elements: elements that do nothing but contain content inside them. </li>
+                      <li>
+                      <ul>
+                        <li>
+                          &lt;span&gt; - use inline, for a small amount of content </li>
+                        <li> 
+                          &lt;div&gt; - "division element", use to create a block (with line breaks) </li>
+                      </ul>
+                      </li>
+              </ul>
+              </li>
+          
+          <li> <strong>Attribute</strong> - this is a property of an HTML element. For example, to set the href attribute of an anchor tag to the Udacity URL, you would write &lt;a href="www.udacity.com"&gt; </li>
+      </ul>
+      
+    </div>
+
+
+  
+
+<!--Lesson 1.2 -->
+
+  
+  <h2 id="lesson2">Lesson 2: Creating a Structured Document with HTML</h2>
+  <div class="notes">
+      <h3>Overview of lesson:</h3>
+          <ol>
+            <li>How the web works</li>
+            <li>How HTML is structured</li>
+            <li>How web browsers interpret that structure</li>
+
+          </ol>
+
+    <div>
+        
+        <h3>How the web works</h3>
+        <p>
+          Three languages of web development: HTML, CSS, JavaScript (though no JavaScript in this ND). They each have different purposes when developing a website. 
+        </p>
+    </div>
+
+    <div>
+        <h3>How HTML is structured</h3>
+        <p>
+          HTML controls the "structure" of a web page, analogy: rooms in a house.
+          CSS controls the "style" of a page (how it looks), analogy: color of room walls in a house.
+        </p>
+    </div>
+
+    <div>
+     
+        <h3>How web browsers interpret that structure</h3>
+        <p>
+          When programmers talk about the "DOM" (Document Object Model) they are talking about the tree-like (or branching) structure of a page. The browser builds the DOM tree. 
+          <br>
+          <br>
+          How does the browser know what the structure is? Because HTML classifies elements -- what is text, what is an image, a browser can understand structure. Remember that content is what is inside element tags.
+          <br>
+          <br>
+        </p>
+          
+        <p>
+          Boxes are used to divide up the structure of a webpage. *everything* on a webpage is a box, even circles. For example, unchecking border-radius property changes circles into squares -- they are circles in the first place due to styling.  
+          <br>
+          These boxes are GREAT. They allow for easier page construction (both design and creation)
+          <br>
+          <br>
+        </p>
+          Translating a design into a web page. <br>
+          <ol>
+            <li>Create some boxes</li>
+            <li>Create divs for the outer-most/biggest boxes</li>
+            <li>Create nested divs for the nested boxes</li>
+          </ol>
+        <p>
+          The way nested boxes thus look in the end is indented html elements, like bullets and sub-bullets in a list. 
+        </p>
+    </div>
+
+  </div>
+  
+  
+  <h2 id="lesson3">Lesson 3: Adding CSS Style and HTML Structure</h2>
+  <div class="notes">
+    <h3>Goals </h3>
+      <ol>
+      <li>Add style with CSS</li>
+      <li>Learn to avoid repetition</li>
+      </ol>
+    <h3>What is CSS?</h3>
+      <p> 
+        CSS stands for "Cascading Style Sheets." <br>
+        CSS is code written to control the "style" of HTML elements. <br>
+        CSS allows programmers to avoid repetition.
+      </p>
+    <h3>Find and Replace </h3>
+      <p>
+      You can also think about CSS as a find and replace tool: you identify a class or a tag of the element you want to find (or match, in CSS terminology), and then what you want to do with it, or what property values to replace with different ones (rather than repeating the same styling for each area).
+      </p>
+    <h3>PEMDAS, AKA Order Matters</h3>
+      <p>It also matters where you define the rules and in what order they are applied, later rules can end up overwriting earlier ones. Types of rules: 
+      </p>
+        <ul>
+          <li>the default style of a browser (different browsers have slightly different styles)</li>
+          <li>stylesheet in a separate file (this is what you will be mostly using)</li>
+          <li>stylesheet inside HTML (this can be done for small projects but is not ideal)</li>
+          <li>inline style in an element (this can also be done but should be avoided)</li>
+        </ul>
+
+    <h3>Inheritance</h3>
+      <p>"Cascading" means that rules are applied not only to the elements they directly match, but also to all of those elements' child elements. However, if a child element has multiple, overlapping rules defined for it, the more specific rule takes effect. 
+      </p>
+    <h3>How to apply CSS? </h3>
+      Three main ways. 
+        <ol>
+          <li>Write CSS in the &lt;head&gt; of your HTML: good for very small projects.</li>
+          <li>Link your HTML to a separate CSS file: good for majority of projects. </li>
+          <li>Write your style inline with your HTML: not good, forces lots of repetition. (avoid this to save time, avoid errors and keep consistent, keeping the page looking nice)</li>
+        </ol>
+      
+    <h3>CSS Selector</h3>
+      <p>Defines what elements of the page a particular style will apply to. For example, </p>p> 
+        <pre><code>
+
+            p { 
+
+            }
+        </code> </pre>
+            Will enforce a particular style for all &lt;p&gt;. <br><br>
+
+            You can combine all selectors.
+      
+    <h3>CSS Attributes</h3>
+      <p>There are a LOT of CSS attributes. Not worth memorizing, definitely worth knowing documentation for easy look up: <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/Reference">https://developer.mozilla.org/en-US/docs/Web/CSS/Reference</a>
+      </p>
+
+  </div>
+</body>
+
